@@ -39,15 +39,17 @@ public class LineComparison {
         System.out.println("Enter Y Coordinates of Second Point");
         Y2_LINE2 = scan.nextInt();
         LENGTH_LINE2 = getLength(X1_LINE2,Y1_LINE2,X2_LINE2,Y2_LINE2);
-        equals(LENGTH_LINE1,LENGTH_LINE2);
+        compareTo(LENGTH_LINE1,LENGTH_LINE2);
 
     }
 
-    static void equals(double line1,double line2){
+    static void compareTo(double line1,double line2){
         if(line1 == line2)
             System.out.println("line 1 and line2 two are equal");
+        else if (line1>line2)
+            System.out.println("line 1 is greater than line2");
         else
-            System.out.println("line 1 and line2 two are not equal");
+            System.out.println("line 2 is greater than line 1");
     }
 
     public static double getLength(int x1, int y1,int x2,int y2) {
